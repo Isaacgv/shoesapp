@@ -4,6 +4,8 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 import { OneSignal } from "react-native-onesignal"
 import { Routes } from './src/routes';
 
+import { tagUserEmailCreate } from "./src/notifications/notificationsTags"
+
 import { THEME } from './src/theme';
 import { Loading } from './src/components/Loading';
 
@@ -17,6 +19,8 @@ OneSignal.Notifications.requestPermission(true)
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
 
+  tagUserEmailCreate("EMAIL")
+  
   return (
     <NativeBaseProvider theme={THEME}>
       <StatusBar
