@@ -12,3 +12,12 @@ npx expo prebuild
 npx expo run:android
 # Run with expo
 npx expo install expo-dev-client
+
+# Add deep linking
+npx expo prebuild
+npx uri-scheme list
+npx expo run:android
+
+npx uri-scheme open igniteshoesapp://IP:PORT --android
+
+npx uri-scheme open igniteshoesapp://details/7 --android
